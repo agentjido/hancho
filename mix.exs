@@ -27,6 +27,8 @@ defmodule Hancho.MixProject do
       {:bedrock,
        github: "mikehostetler/bedrock", ref: "84e7cd3c92df39721d7d15718b80befc2f351833"},
       {:erlexec, "~> 2.6.0", runtime: false},
+      # The pinned Bedrock still requires Hackney 1.x, which cannot use idna 8.
+      {:hackney, "~> 4.12", override: true},
       {:git, "~> 0.7.0"},
       {:jason, "~> 1.4"},
       {:jido_action, "~> 2.3"},
